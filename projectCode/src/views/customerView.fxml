@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="custRootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="619.0" prefWidth="756.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.customerHomeController">
+   <children>
+      <Label layoutX="236.0" layoutY="56.0" prefHeight="25.0" prefWidth="198.0" text="IIT CHICAGO INSURANCE " textFill="#6c06e8">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgLogo" fitHeight="34.0" fitWidth="56.0" layoutX="318.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Users/curie/Desktop/logo-iit.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="645.0" layoutY="76.0" />
+      <Label layoutX="567.0" layoutY="73.0" prefHeight="17.0" prefWidth="121.0" text="Welcome Customer!" />
+      <Button layoutX="688.0" layoutY="69.0" mnemonicParsing="false" onAction="#logoutFromView" text="Logout" textFill="#4c08c3" />
+      <TabPane fx:id="tabPane" layoutX="14.0" layoutY="88.0" prefHeight="505.0" prefWidth="659.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+         <tabs>
+            <Tab text="View Policy">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.2869198312236287" layoutX="90.0" layoutY="57.0" prefHeight="433.0" prefWidth="713.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <items>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <Button layoutX="66.0" layoutY="49.0" mnemonicParsing="false" onAction="#viewHomePolicy" text="Home Policy" textFill="#4c08c3" />
+                                    <Button layoutX="65.0" layoutY="123.0" mnemonicParsing="false" onAction="#viewHealthPolicy" text="Health Policy" textFill="#4c15ab" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <Pane fx:id="paneHomePolicy" layoutY="79.0" prefHeight="352.0" prefWidth="504.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <RadioButton layoutX="29.0" layoutY="17.0" mnemonicParsing="false" onAction="#viewRentedHome" text="Rented">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="home" />
+                                             </toggleGroup></RadioButton>
+                                          <RadioButton layoutX="238.0" layoutY="17.0" mnemonicParsing="false" onAction="#viewOwnedHome" text="Owned" toggleGroup="$home" />
+                                          <Pane fx:id="paneRented" layoutY="52.0" prefHeight="359.0" prefWidth="502.0" visible="false">
+                                             <children>
+                                                <SplitPane dividerPositions="0.4960159362549801" layoutY="40.0" prefHeight="275.0" prefWidth="504.0">
+                                                  <items>
+                                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="290.0" prefWidth="247.0">
+                                                         <children>
+                                                            <Label layoutX="82.0" layoutY="14.0" text="1-Year Plan" />
+                                                            <Label layoutX="86.0" layoutY="48.0" prefHeight="17.0" prefWidth="54.0" text="\$1999.99" textFill="#4f0ae4" />
+                                                            <TextArea layoutX="2.0" layoutY="82.0" prefHeight="171.0" prefWidth="236.0" text="1. Protect your home from burglary, terrorism, theft, etc.&#10;&#10;2. Don’t let fire accidents burn a hole in your pocket&#10;&#10;3. Protect your home content like electronics, furniture and avail 25% discount.&#10;&#10;4. Don’t let water damages stress you financially&#10;" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="363.0" prefWidth="268.0">
+                                                         <children>
+                                                            <Label layoutX="93.0" layoutY="14.0" text="2-Year Plan" />
+                                                            <Label layoutX="100.0" layoutY="49.0" text="\$2999.99" textFill="#4f0ae4" />
+                                                            <TextArea layoutX="6.0" layoutY="82.0" prefHeight="171.0" prefWidth="239.0" text="1. Protect your home content like electronics, furniture and avail 25% discount&#10;&#10;2. Cover damages due to fire or allied perils.&#10;&#10;3. Protect your jewellery with our All-Risk Cover and stay worry-free.&#10;&#10;4. Protect your home from burglary, terrorism, theft, etc.&#10;&#10;5. Stay protected against water seepage and resultant damages." />
+                                                         </children>
+                                                      </AnchorPane>
+                                                  </items>
+                                                </SplitPane>
+                                                <Label layoutX="182.0" layoutY="14.0" text="SafeGuard Your HomeAssets" />
+                                                <Button layoutX="277.0" layoutY="323.0" mnemonicParsing="false" onAction="#clickToRegisterHome" text="Register" />
+                                                <Label layoutX="137.0" layoutY="327.0" text="Do you want to register?" />
+                                             </children>
+                                          </Pane>
+                                          <Pane fx:id="paneOwned" layoutX="1.0" layoutY="36.0" prefHeight="392.0" prefWidth="503.0" visible="false">
+                                             <children>
+                                                <SplitPane dividerPositions="0.5049701789264414" layoutY="48.0" prefHeight="294.0" prefWidth="505.0">
+                                                  <items>
+                                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                                         <children>
+                                                            <Label layoutX="105.0" layoutY="13.0" text="1- Year" />
+                                                            <Label layoutX="98.0" layoutY="44.0" text="\$ 2999.99" textFill="#4517ea" />
+                                                            <TextArea layoutX="5.0" layoutY="77.0" prefHeight="206.0" prefWidth="236.0" text="1. Protect your home from burglary, terrorism, theft, etc.&#10;&#10;2. Don’t let fire accidents burn a hole in your pocket&#10;&#10;3. Protect your home content like electronics, furniture and avail 25% discount.&#10;&#10;4. Don’t let water damages stress you financially&#10;&#10;5. Stay protected against water seepage and resultant damages.&#10;" />
+                                                         </children></AnchorPane>
+                                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                                         <children>
+                                                            <Label layoutX="97.0" layoutY="14.0" text="2- Year" />
+                                                            <Label layoutX="90.0" layoutY="48.0" text="\$ 3999.99" textFill="#4517ea" />
+                                                            <TextArea layoutX="14.0" layoutY="79.0" prefHeight="203.0" prefWidth="221.0" text="1. Protect your home content like electronics, furniture and avail 25% discount&#10;&#10;2. Cover damages due to fire or allied perils.&#10;&#10;3. Protect your jewellery with our All-Risk Cover and stay worry-free.&#10;&#10;4. Protect your home from burglary, terrorism, theft, etc.&#10;&#10;5. Stay protected against water seepage and resultant damages.&#10;&#10;6. You get a massive 50% discount when you opt for a 10 year structure cover." />
+                                                         </children></AnchorPane>
+                                                  </items>
+                                                </SplitPane>
+                                                <Label layoutX="168.0" layoutY="14.0" text="Safeguard Structure and Content" />
+                                                <Button layoutX="255.0" layoutY="355.0" mnemonicParsing="false" onAction="#clickToRegisterHome" text="Register" />
+                                                <Label layoutX="111.0" layoutY="359.0" text="Do you want to register?" />
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </Pane>
+                                    <Pane fx:id="paneHealthPolicy" prefHeight="431.0" prefWidth="504.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <RadioButton layoutX="27.0" layoutY="29.0" mnemonicParsing="false" onAction="#viewHealthIndividual" text="Health Individual">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="health" />
+                                             </toggleGroup></RadioButton>
+                                          <RadioButton layoutX="239.0" layoutY="29.0" mnemonicParsing="false" onAction="#viewProHealthPlus" prefHeight="17.0" prefWidth="110.0" text="Pro-Health Plus" toggleGroup="$health" />
+                                          <Pane fx:id="paneHealthIndividual" layoutY="68.0" prefHeight="360.0" prefWidth="503.0" visible="false">
+                                             <children>
+                                                <SplitPane dividerPositions="0.5169660678642715" layoutX="1.0" prefHeight="308.0" prefWidth="503.0">
+                                                  <items>
+                                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="343.0" prefWidth="266.0">
+                                                         <children>
+                                                            <Label layoutX="88.0" layoutY="14.0" text="1-Year Plan" />
+                                                            <Label layoutX="97.0" layoutY="43.0" text="\$999.99" textFill="#4916c9" />
+                                                            <TextArea layoutX="8.0" layoutY="79.0" prefHeight="214.0" prefWidth="241.0" text="1. Health Individual gives you the option to get an additional cover and reimbursement for accidental hospitalisation expenses.&#10;&#10;2. If you are hospitalised due to an accident, your expenses will be covered.&#10;&#10;3. Get coverage against expenses related to permanent total disablement with your Health Individual Plan policy.&#10;&#10;4. Organ Transplant is well-covered here." />
+                                                         </children>
+                                                      </AnchorPane>
+                                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                                         <children>
+                                                            <Label layoutX="95.0" layoutY="14.0" text="2- Year Plan" />
+                                                            <Label layoutX="95.0" layoutY="42.0" text="\$1599.99" textFill="#4916c9" />
+                                                            <TextArea layoutX="8.0" layoutY="81.0" prefHeight="216.0" prefWidth="223.0" text="1. Health Individual gives you the option to get an additional cover and reimbursement for accidental hospitalisation expenses.&#10;&#10;2. If you are hospitalised due to an accident, your expenses will be covered.&#10;&#10;3. Get coverage against expenses related to permanent total disablement with your Health Individual Plan policy.&#10;&#10;4. Organ Transplant is well-covered here.&#10;&#10;5. Health insurance 2-year plan will also cover accidental death.&#10;" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                  </items>
+                                                </SplitPane>
+                                                <Label layoutX="121.0" layoutY="320.0" text="Do you want to register?" />
+                                                <Button layoutX="264.0" layoutY="316.0" mnemonicParsing="false" onAction="#clickToRegisterHealth" text="Register" />
+                                             </children>
+                                          </Pane>
+                                          <Pane fx:id="paneProHealthPlus" layoutX="-3.0" layoutY="59.0" prefHeight="374.0" prefWidth="508.0" visible="false">
+                                             <children>
+                                                <SplitPane dividerPositions="0.5020080321285141" prefHeight="325.0" prefWidth="503.0">
+                                                   <items>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                                         <children>
+                                                            <Label layoutX="97.0" layoutY="14.0" text="1-Yr Plan" />
+                                                            <Label layoutX="97.0" layoutY="43.0" text="\$ 1599.99" textFill="#400ee4" />
+                                                            <TextArea layoutX="8.0" layoutY="85.0" prefHeight="227.0" prefWidth="235.0" text="1. Pro- Health gives you the option to get an additional cover and reimbursement for accidental hospitalisation expenses.&#10;&#10;2. In case of hospitalisalization due to an accident, your expenses will be covered.&#10;&#10;3. Get coverage against expenses related to permanent total disablement with your Health Individual Plan policy.&#10;&#10;4. Organ Transplant is well-covered here.&#10;&#10;5. Claim money in case of accidental death.&#10;&#10;6. Dental surgeries are taken care along with free medical health check ups" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                                         <children>
+                                                            <Label layoutX="95.0" layoutY="14.0" text="2-Yr Plan" />
+                                                            <Label layoutX="95.0" layoutY="42.0" text="\$ 2499.99" textFill="#400ee4" />
+                                                            <TextArea layoutX="14.0" layoutY="86.0" prefHeight="226.0" prefWidth="223.0" text="1. Pro- Health gives you the option to get an additional cover and reimbursement for accidental hospitalisation expenses.&#10;&#10;2. In case of hospitalisalization due to an accident, your expenses will be covered.&#10;&#10;3. Get coverage against expenses related to permanent total disablement with your Health Individual Plan policy.&#10;&#10;4. Organ Transplant is well-covered here.&#10;&#10;5. Claim money in case of accidental death.&#10;&#10;6. Cosmetlogical + Dental coverage&#10;" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </items>
+                                                </SplitPane>
+                                                <Button layoutX="278.0" layoutY="335.0" mnemonicParsing="false" onAction="#clickToRegisterHealth" text="Register" />
+                                                <Label layoutX="129.0" layoutY="339.0" text="Do you want to Register?" />
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </Pane>
+                                 </children></AnchorPane>
+                           </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabRegisterHomePolicy" text="Register Home Policy">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane layoutX="1.0" prefHeight="424.0" prefWidth="735.0" AnchorPane.leftAnchor="10.0">
+                           <content>
+                              <GridPane prefHeight="511.0" prefWidth="691.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="349.0" minWidth="10.0" prefWidth="158.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="572.0" minWidth="10.0" prefWidth="314.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="572.0" minWidth="10.0" prefWidth="231.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="26.0" minHeight="7.0" prefHeight="7.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="51.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="45.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="42.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="31.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="26.0" minHeight="8.0" prefHeight="8.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="54.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="44.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="36.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="35.0" minHeight="0.0" prefHeight="5.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="35.0" minHeight="0.0" prefHeight="21.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label text=" Customer ID" GridPane.rowIndex="2" />
+                                    <Label text=" Name" GridPane.rowIndex="3" />
+                                    <Label text=" Age" GridPane.rowIndex="4" />
+                                    <Label text=" Phone" GridPane.rowIndex="5" />
+                                    <TextField fx:id="txtRegName" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <TextField fx:id="txtRegAge" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <TextField fx:id="txtRegPhone" prefHeight="10.0" prefWidth="524.0" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                    <TextField fx:id="txtcusID" prefHeight="0.0" prefWidth="540.0" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Label prefHeight="17.0" prefWidth="140.0" text="Customer Information" textFill="#4c08c3">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Policy Information" textFill="#4c08c3" GridPane.rowIndex="6">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text=" House Type" GridPane.rowIndex="8" />
+                                    <ComboBox fx:id="comboHouseType" prefWidth="150.0" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                    <ComboBox fx:id="comboPolicyDuration" prefWidth="150.0" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                                    <Label text=" Policy Duration" GridPane.rowIndex="9" />
+                                    <Label text=" Amount To be Paid" GridPane.rowIndex="10" />
+                                    <Label text=" Value of Assets" GridPane.rowIndex="11" />
+                                    <Label text=" Value of Home" GridPane.rowIndex="12" />
+                                    <TextField fx:id="txtHomeAmtPaid" disable="true" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                                    <TextField fx:id="txtValueAssets" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                                    <TextField fx:id="txtValueHome" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+                                    <Separator prefWidth="200.0" GridPane.rowIndex="1" />
+                                    <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Separator prefWidth="200.0" GridPane.rowIndex="7" />
+                                    <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                    <Label text="Nominee Information" textFill="#4c08c3" GridPane.rowIndex="13">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Separator prefWidth="200.0" GridPane.rowIndex="14" />
+                                    <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+                                    <Label text=" Nominee Name" GridPane.rowIndex="15" />
+                                    <Label text=" Nominee Relation" GridPane.rowIndex="16" />
+                                    <CheckBox mnemonicParsing="false" onAction="#goToConfirmationPane" text="I accept terms and Conditions" GridPane.columnIndex="1" GridPane.rowIndex="17" />
+                                    <TextField fx:id="txtNomName" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="15" />
+                                    <TextField fx:id="txtNomRelation" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="16" />
+                                    <Label fx:id="customerid" prefHeight="17.0" prefWidth="222.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <Label fx:id="customername" prefHeight="17.0" prefWidth="232.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                    <Label fx:id="customerage" prefHeight="17.0" prefWidth="232.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                    <Label fx:id="customerphone" prefHeight="17.0" prefWidth="232.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                                    <Label fx:id="valueassets" prefHeight="17.0" prefWidth="232.0" GridPane.columnIndex="2" GridPane.rowIndex="11" />
+                                    <Label fx:id="valuehome" prefHeight="17.0" prefWidth="232.0" GridPane.columnIndex="2" GridPane.rowIndex="12" />
+                                    <Label fx:id="nomNameError" prefHeight="17.0" prefWidth="216.0" GridPane.columnIndex="2" GridPane.rowIndex="15" />
+                                    <Label fx:id="nomRelationError" prefHeight="17.0" prefWidth="214.0" GridPane.columnIndex="2" GridPane.rowIndex="16" />
+                                 </children>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                        <Pane fx:id="paneRegConfirmation" layoutX="14.0" layoutY="429.0" prefHeight="47.0" prefWidth="382.0" visible="false">
+                           <children>
+                              <Label fx:id="lblPolicyNo" layoutX="23.0" layoutY="15.0" text="Are you sure you want to Register?" />
+                              <Button layoutX="245.0" layoutY="11.0" mnemonicParsing="false" onAction="#goToPolicyRegIdPage" text="Yes" />
+                              <Button layoutX="298.0" layoutY="11.0" mnemonicParsing="false" onAction="#clearHomeFields" text="No" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabRegisterHealthPolicy" text="Register Health Policy">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane fx:id="PolicyRegPage" prefHeight="421.0" prefWidth="731.0" AnchorPane.leftAnchor="10.0">
+                           <content>
+                              <GridPane prefHeight="567.0" prefWidth="697.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="349.0" minWidth="10.0" prefWidth="159.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="572.0" minWidth="10.0" prefWidth="281.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="572.0" minWidth="10.0" prefWidth="279.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="26.0" minHeight="7.0" prefHeight="7.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="51.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="45.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="42.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="16.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="26.0" minHeight="8.0" prefHeight="8.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="54.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="42.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="37.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="35.0" minHeight="5.000020345052064" prefHeight="5.000020345052064" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="51.666646321614564" minHeight="10.0" prefHeight="38.66668701171875" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="51.666646321614564" minHeight="10.0" prefHeight="31.333333333333314" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="38.66666666666663" minHeight="10.0" prefHeight="38.66666666666663" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label text=" Customer ID" GridPane.rowIndex="2" />
+                                    <Label text=" Name" GridPane.rowIndex="3" />
+                                    <Label text=" Age" GridPane.rowIndex="4" />
+                                    <Label text="Phone" GridPane.rowIndex="5" />
+                                    <TextField fx:id="txtCustName" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <TextField fx:id="txtCustAge" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <TextField fx:id="txtCustPhone" prefHeight="10.0" prefWidth="524.0" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                    <TextField fx:id="txtCustId" prefHeight="0.0" prefWidth="540.0" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Label prefHeight="23.0" prefWidth="146.0" text="Customer Information" textFill="#4c08c3">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text=" Policy Information" textFill="#4c08c3" GridPane.rowIndex="6">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text=" Plan Type" GridPane.rowIndex="8" />
+                                    <ComboBox fx:id="comboHealthPlanType" prefWidth="150.0" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                    <ComboBox fx:id="comboHealthPolDuration" prefWidth="150.0" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                                    <Label text=" Policy Duration" GridPane.rowIndex="9" />
+                                    <Label fx:id="txtAmtToPay" text=" Amount To be Paid" GridPane.rowIndex="10" />
+                                    <Label text=" Any Medical Issues?" wrapText="true" GridPane.rowIndex="11" />
+                                    <Label prefHeight="21.0" prefWidth="149.0" text=" If others? Specify here" GridPane.rowIndex="12" />
+                                    <TextField fx:id="txtHealthAmtToPay" disable="true" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                                    <TextField fx:id="txtOtherIssue" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+                                    <Separator prefWidth="200.0" GridPane.rowIndex="1" />
+                                    <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Separator prefWidth="200.0" GridPane.rowIndex="7" />
+                                    <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                    <CheckBox mnemonicParsing="false" onAction="#acceptToRegisterPolicy" text="I accept terms and Conditions" GridPane.columnIndex="1" GridPane.rowIndex="17" />
+                                    <ComboBox fx:id="comboMedIssue" prefWidth="150.0" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                                    <Label text=" Nominee Information" textFill="#4c08c3" GridPane.rowIndex="13">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Separator prefWidth="200.0" GridPane.rowIndex="14" />
+                                    <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+                                    <Label text=" Nominee Name" GridPane.rowIndex="15" />
+                                    <TextField fx:id="txtHealthNomineeName" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="15" />
+                                    <Label text=" Nominee Relation" GridPane.rowIndex="16" />
+                                    <TextField fx:id="txtHealthNomineeRelation" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="16" />
+                                 </children>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                        <Pane fx:id="paneRegHealthPolicy" layoutY="431.0" prefHeight="55.0" prefWidth="443.0" visible="false">
+                           <children>
+                              <Label layoutX="14.0" layoutY="15.0" prefHeight="25.0" prefWidth="219.0" text="Are you sure you want to register?" />
+                              <Button layoutX="233.0" layoutY="15.0" mnemonicParsing="false" onAction="#goToHealthPolicyRegIdPage" text="Yes" />
+                              <Button layoutX="289.0" layoutY="15.0" mnemonicParsing="false" onAction="#clearHealthField" text="No" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Your Details">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="426.0" layoutY="62.0" mnemonicParsing="false" onAction="#getCustomerInfo" text="Click to View Details" textFill="#4c08c3" />
+                        <Label layoutX="152.0" layoutY="66.0" text="Enter  Customer ID:" textFill="#4c08c3" />
+                        <TextField fx:id="txtSubmitCustIDOwn" layoutX="264.0" layoutY="62.0" />
+                        <Label layoutX="291.0" layoutY="26.0" prefHeight="20.0" prefWidth="145.0" text="Your Own Information" textFill="#4c08c3">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblCusDetailsError" layoutX="558.0" layoutY="66.0" prefHeight="17.0" prefWidth="157.0" textFill="#f53207f0" />
+                        <ScrollPane layoutX="205.0" layoutY="103.0" prefHeight="340.0" prefWidth="308.0">
+                           <content>
+                              <GridPane prefHeight="296.0" prefWidth="313.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="188.0" minWidth="10.0" prefWidth="140.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="259.0" minWidth="10.0" prefWidth="230.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label text=" Customer Id :" />
+                                    <Label fx:id="lblCustIdOwn" prefHeight="17.0" prefWidth="181.0" GridPane.columnIndex="1" />
+                                    <Label prefHeight="17.0" prefWidth="109.0" text=" Name : " GridPane.rowIndex="2" />
+                                    <Label fx:id="lblCusNameOwn" prefHeight="17.0" prefWidth="198.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Label prefHeight="17.0" prefWidth="71.0" text=" Phone :" GridPane.rowIndex="4" />
+                                    <Label prefHeight="17.0" prefWidth="67.0" text=" Address : " GridPane.rowIndex="6" />
+                                    <Label text=" Age :" GridPane.rowIndex="8" />
+                                    <Label text=" Gender :" GridPane.rowIndex="10" />
+                                    <Label text=" Email :" GridPane.rowIndex="12" />
+                                    <Label fx:id="lblCusPhoneOwn" prefHeight="17.0" prefWidth="211.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <Label fx:id="lblCusAddressOwn" prefHeight="17.0" prefWidth="207.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                    <Label fx:id="lblCustAgeOwn" prefHeight="17.0" prefWidth="219.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                    <Label fx:id="lblCustGenderOwn" prefHeight="17.0" prefWidth="220.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                                    <Label fx:id="lblCustEmailOwn" prefHeight="17.0" prefWidth="216.0" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+                                    <Separator prefWidth="200.0" GridPane.rowIndex="1" />
+                                    <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Separator prefWidth="200.0" GridPane.rowIndex="3" />
+                                    <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Separator prefWidth="200.0" GridPane.rowIndex="5" />
+                                    <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                    <Separator prefWidth="200.0" GridPane.rowIndex="7" />
+                                    <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                    <Separator prefWidth="200.0" GridPane.rowIndex="9" />
+                                    <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                                    <Separator prefWidth="200.0" GridPane.rowIndex="11" />
+                                    <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                                    <Separator prefWidth="200.0" GridPane.rowIndex="13" />
+                                    <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+                                 </children>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Registered Policy Details">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="242.0" layoutY="30.0" text="Your Registered Policy Details" textFill="#4c08c3">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="145.0" layoutY="80.0" text="Enter Your Policy ID:" textFill="#4c08c3" />
+                        <TextField fx:id="txtSubmitPid" layoutX="260.0" layoutY="76.0" />
+                        <Button layoutX="422.0" layoutY="76.0" mnemonicParsing="false" onAction="#GetDetailsFromDB" text="Submit" textFill="#4c08c3" />
+                        <ScrollPane layoutX="207.0" layoutY="123.0" prefHeight="313.0" prefWidth="311.0">
+                           <content>
+                              <GridPane prefHeight="333.0" prefWidth="293.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="188.0" minWidth="10.0" prefWidth="125.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="259.0" minWidth="10.0" prefWidth="168.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text=" Customer Id :" />
+                                    <Label fx:id="lblCustId" prefHeight="17.0" prefWidth="87.0" GridPane.columnIndex="1" />
+                                    <Label prefHeight="17.0" prefWidth="97.0" text=" Name : " GridPane.rowIndex="2" />
+                                    <Label fx:id="lblPolName" prefHeight="17.0" prefWidth="165.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Label prefHeight="17.0" prefWidth="71.0" text=" Age :" GridPane.rowIndex="4" />
+                                    <Label prefHeight="17.0" prefWidth="67.0" text=" Phone :" GridPane.rowIndex="6" />
+                                    <Label text=" Policy Type :" GridPane.rowIndex="8" />
+                                    <Label text=" Policy Duration :" GridPane.rowIndex="10" />
+                                    <Label text=" Amount to be Paid :" GridPane.rowIndex="12" />
+                                    <Label text=" Nominee Name :" GridPane.rowIndex="14" />
+                                    <Label text=" Nominee relation :" GridPane.rowIndex="16" />
+                                    <Label GridPane.rowIndex="17" />
+                                    <Label fx:id="lblPolAge" prefHeight="17.0" prefWidth="165.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <Label fx:id="lblPolPhone" prefHeight="17.0" prefWidth="168.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                    <Label fx:id="lblPolType" prefHeight="17.0" prefWidth="167.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                    <Label fx:id="lblPolDuration" prefHeight="17.0" prefWidth="167.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                                    <Label fx:id="lblAmtPay" prefHeight="17.0" prefWidth="169.0" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+                                    <Label fx:id="lblNomName" prefHeight="17.0" prefWidth="171.0" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+                                    <Label fx:id="lblNomRelation" prefHeight="17.0" prefWidth="171.0" GridPane.columnIndex="1" GridPane.rowIndex="16" />
+                                    <Separator prefWidth="200.0" GridPane.rowIndex="1" />
+                                    <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Separator prefWidth="200.0" GridPane.rowIndex="3" />
+                                    <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Separator prefWidth="200.0" GridPane.rowIndex="5" />
+                                    <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                    <Separator prefWidth="200.0" GridPane.rowIndex="7" />
+                                    <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                    <Separator prefWidth="200.0" GridPane.rowIndex="9" />
+                                    <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                                    <Separator prefWidth="200.0" GridPane.rowIndex="11" />
+                                    <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                                    <Separator prefWidth="200.0" GridPane.rowIndex="13" />
+                                    <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+                                    <Separator prefWidth="200.0" GridPane.rowIndex="15" />
+                                    <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="15" />
+                                 </children>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                        <Label fx:id="lblPolDetError" layoutX="504.0" layoutY="80.0" prefHeight="17.0" prefWidth="239.0" textFill="#fc1010" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

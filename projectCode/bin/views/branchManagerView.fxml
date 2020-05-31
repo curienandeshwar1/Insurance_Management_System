@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="745.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.branchManagerController">
+   <children>
+      <Label layoutX="257.0" layoutY="48.0" prefHeight="25.0" prefWidth="198.0" text="IIT CHICAGO INSURANCE " textFill="#6c06e8">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgLogo" fitHeight="34.0" fitWidth="56.0" layoutX="339.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Users/curie/Desktop/logo-iit.jpg" />
+         </image>
+      </ImageView>
+      <TabPane layoutX="14.0" layoutY="88.0" prefHeight="505.0" prefWidth="659.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+         <tabs>
+            <Tab text="Policies">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.29797979797979796" layoutX="79.0" layoutY="55.0" prefHeight="376.0" prefWidth="659.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <items>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <Button layoutX="44.0" layoutY="40.0" mnemonicParsing="false" onAction="#viewHomePolicy" text="Home Policy" textFill="#6f0ce8" />
+                                    <Button layoutX="43.0" layoutY="114.0" mnemonicParsing="false" onAction="#viewHealthPolicy" text="Health Policy" textFill="#320cee" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <Pane fx:id="paneHomePolicy" prefHeight="447.0" prefWidth="519.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <RadioButton layoutX="29.0" layoutY="17.0" mnemonicParsing="false" onAction="#viewRentedHome" text="Rented">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="home" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton layoutX="238.0" layoutY="17.0" mnemonicParsing="false" onAction="#viewOwnedHome" text="Owned" toggleGroup="$home" />
+                                          <Pane fx:id="paneRented" layoutY="63.0" prefHeight="382.0" prefWidth="519.0" visible="false">
+                                             <children>
+                                                <SplitPane dividerPositions="0.4960159362549801" layoutY="40.0" prefHeight="325.0" prefWidth="504.0">
+                                                   <items>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                                         <children>
+                                                            <Label layoutX="82.0" layoutY="14.0" text="1-Year Plan" />
+                                                            <Label layoutX="86.0" layoutY="48.0" prefHeight="17.0" prefWidth="54.0" text="\$1999.99" textFill="#4f0ae4" />
+                                                            <TextArea layoutX="2.0" layoutY="82.0" prefHeight="208.0" prefWidth="232.0" text="1. Protect your home from burglary, terrorism, theft, etc.&#10;&#10;2. Don’t let fire accidents burn a hole in your pocket&#10;&#10;3. Protect your home content like electronics, furniture and avail 25% discount.&#10;&#10;4. Don’t let water damages stress you financially&#10;" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="363.0" prefWidth="268.0">
+                                                         <children>
+                                                            <Label layoutX="93.0" layoutY="14.0" text="2-Year Plan" />
+                                                            <Label layoutX="100.0" layoutY="49.0" text="\$2999.99" textFill="#4f0ae4" />
+                                                            <TextArea layoutX="13.0" layoutY="82.0" prefHeight="207.0" prefWidth="232.0" text="1. Protect your home content like electronics, furniture and avail 25% discount&#10;&#10;2. Cover damages due to fire or allied perils.&#10;&#10;3. Protect your jewellery with our All-Risk Cover and stay worry-free.&#10;&#10;4. Protect your home from burglary, terrorism, theft, etc.&#10;&#10;5. Stay protected against water seepage and resultant damages." />
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </items>
+                                                </SplitPane>
+                                                <Label layoutX="182.0" layoutY="14.0" text="SafeGuard Your HomeAssets" />
+                                             </children>
+                                          </Pane>
+                                          <Pane fx:id="paneOwned" layoutX="1.0" layoutY="63.0" prefHeight="368.0" prefWidth="503.0" visible="false">
+                                             <children>
+                                                <SplitPane dividerPositions="0.4990059642147117" layoutY="48.0" prefHeight="322.0" prefWidth="505.0">
+                                                   <items>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                                         <children>
+                                                            <Label layoutX="105.0" layoutY="13.0" text="1- Year" />
+                                                            <Label layoutX="98.0" layoutY="44.0" text="\$ 2999.99" textFill="#4517ea" />
+                                                            <TextArea layoutX="5.0" layoutY="77.0" prefHeight="206.0" prefWidth="236.0" text="1. Protect your home from burglary, terrorism, theft, etc.&#10;&#10;2. Don’t let fire accidents burn a hole in your pocket&#10;&#10;3. Protect your home content like electronics, furniture and avail 25% discount.&#10;&#10;4. Don’t let water damages stress you financially&#10;&#10;5. Stay protected against water seepage and resultant damages.&#10;" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                                         <children>
+                                                            <Label layoutX="97.0" layoutY="14.0" text="2- Year" />
+                                                            <Label layoutX="90.0" layoutY="48.0" text="\$ 3999.99" textFill="#4517ea" />
+                                                            <TextArea layoutX="14.0" layoutY="79.0" prefHeight="203.0" prefWidth="221.0" text="1. Protect your home content like electronics, furniture and avail 25% discount&#10;&#10;2. Cover damages due to fire or allied perils.&#10;&#10;3. Protect your jewellery with our All-Risk Cover and stay worry-free.&#10;&#10;4. Protect your home from burglary, terrorism, theft, etc.&#10;&#10;5. Stay protected against water seepage and resultant damages.&#10;&#10;6. You get a massive 50% discount when you opt for a 10 year structure cover." />
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </items>
+                                                </SplitPane>
+                                                <Label layoutX="168.0" layoutY="14.0" text="Safeguard Structure and Content" />
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </Pane>
+                                    <Pane fx:id="paneHealthPolicy" prefHeight="447.0" prefWidth="519.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <RadioButton layoutX="27.0" layoutY="29.0" mnemonicParsing="false" onAction="#viewHealthIndividual" text="Health Individual">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="health" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton layoutX="239.0" layoutY="29.0" mnemonicParsing="false" onAction="#viewProHealthPlus" prefHeight="17.0" prefWidth="110.0" text="Pro-Health Plus" toggleGroup="$health" />
+                                          <Pane fx:id="paneHealthIndividual" layoutY="86.0" prefHeight="342.0" prefWidth="503.0" visible="false">
+                                             <children>
+                                                <SplitPane dividerPositions="0.5169660678642715" layoutX="1.0" prefHeight="345.0" prefWidth="503.0">
+                                                   <items>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="343.0" prefWidth="266.0">
+                                                         <children>
+                                                            <Label layoutX="88.0" layoutY="14.0" text="1-Year Plan" />
+                                                            <Label layoutX="97.0" layoutY="43.0" text="\$999.99" textFill="#4916c9" />
+                                                            <TextArea layoutX="8.0" layoutY="92.0" prefHeight="217.0" prefWidth="241.0" text="1. Health Individual gives you the option to get an additional cover and reimbursement for accidental hospitalisation expenses.&#10;&#10;2. If you are hospitalised due to an accident, your expenses will be covered.&#10;&#10;3. Get coverage against expenses related to permanent total disablement with your Health Individual Plan policy.&#10;&#10;4. Organ Transplant is well-covered here." />
+                                                         </children>
+                                                      </AnchorPane>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                                         <children>
+                                                            <Label layoutX="95.0" layoutY="14.0" text="2- Year Plan" />
+                                                            <Label layoutX="95.0" layoutY="42.0" text="\$1599.99" textFill="#4916c9" />
+                                                            <TextArea layoutX="8.0" layoutY="91.0" prefHeight="220.0" prefWidth="223.0" text="1. Health Individual gives you the option to get an additional cover and reimbursement for accidental hospitalisation expenses.&#10;&#10;2. If you are hospitalised due to an accident, your expenses will be covered.&#10;&#10;3. Get coverage against expenses related to permanent total disablement with your Health Individual Plan policy.&#10;&#10;4. Organ Transplant is well-covered here.&#10;&#10;5. Health insurance 2-year plan will also cover accidental death.&#10;" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </items>
+                                                </SplitPane>
+                                             </children>
+                                          </Pane>
+                                          <Pane fx:id="paneProHealthPlus" layoutX="-3.0" layoutY="77.0" prefHeight="356.0" prefWidth="508.0" visible="false">
+                                             <children>
+                                                <SplitPane dividerPositions="0.5020080321285141" prefHeight="345.0" prefWidth="503.0">
+                                                   <items>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                                         <children>
+                                                            <Label layoutX="97.0" layoutY="14.0" text="1-Yr Plan" />
+                                                            <Label layoutX="97.0" layoutY="43.0" text="\$ 1599.99" textFill="#400ee4" />
+                                                            <TextArea layoutX="8.0" layoutY="85.0" prefHeight="227.0" prefWidth="235.0" text="1. Pro- Health gives you the option to get an additional cover and reimbursement for accidental hospitalisation expenses.&#10;&#10;2. In case of hospitalisalization due to an accident, your expenses will be covered.&#10;&#10;3. Get coverage against expenses related to permanent total disablement with your Health Individual Plan policy.&#10;&#10;4. Organ Transplant is well-covered here.&#10;&#10;5. Claim money in case of accidental death.&#10;&#10;6. Dental surgeries are taken care along with free medical health check ups" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                                         <children>
+                                                            <Label layoutX="95.0" layoutY="14.0" text="2-Yr Plan" />
+                                                            <Label layoutX="95.0" layoutY="42.0" text="\$ 2499.99" textFill="#400ee4" />
+                                                            <TextArea layoutX="14.0" layoutY="86.0" prefHeight="226.0" prefWidth="223.0" text="1. Pro- Health gives you the option to get an additional cover and reimbursement for accidental hospitalisation expenses.&#10;&#10;2. In case of hospitalisalization due to an accident, your expenses will be covered.&#10;&#10;3. Get coverage against expenses related to permanent total disablement with your Health Individual Plan policy.&#10;&#10;4. Organ Transplant is well-covered here.&#10;&#10;5. Claim money in case of accidental death.&#10;&#10;6. Cosmetlogical + Dental coverage&#10;" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </items>
+                                                </SplitPane>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Customers">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.29797979797979796" layoutX="115.0" layoutY="68.0" prefHeight="376.0" prefWidth="659.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <items>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <Button layoutX="46.0" layoutY="45.0" mnemonicParsing="false" onAction="#viewCustomer" text="View Customers" textFill="#370cd3" />
+                                    <Button layoutX="26.0" layoutY="103.0" mnemonicParsing="false" onAction="#viewCustomerDetails" prefHeight="25.0" prefWidth="141.0" text="View Customer Details" textFill="#400cd0" />
+                                    <Button layoutX="23.0" layoutY="162.0" mnemonicParsing="false" onAction="#editCustomerDetails" prefHeight="25.0" prefWidth="147.0" text="Edit Customer Details" textFill="#3609da" />
+                                    <Button layoutX="23.0" layoutY="217.0" mnemonicParsing="false" onAction="#deleteCustomerDetails" prefHeight="25.0" prefWidth="146.0" text="Delete Customer Details" textFill="#110ec3" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="374.0" prefWidth="481.0">
+                                 <children>
+                                    <Pane fx:id="paneViewCustomers" prefHeight="447.0" prefWidth="519.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <TableView fx:id="tableCustomers" prefHeight="321.0" prefWidth="458.0" visible="false">
+                                            <columns>
+                                              <TableColumn fx:id="custId1" prefWidth="62.0" text="ID" />
+                                              <TableColumn fx:id="custName1" prefWidth="66.0" text="Name" />
+                                                <TableColumn fx:id="custPhone1" prefWidth="69.0" text="Phone" />
+                                                <TableColumn fx:id="custAddress1" prefWidth="78.0" text="Address" />
+                                                <TableColumn fx:id="custAge1" prefWidth="62.0" text="Age" />
+                                                <TableColumn fx:id="custGender1" prefWidth="61.0" text="Gender" />
+                                                <TableColumn fx:id="custEmail1" prefWidth="59.0" text="Email" />
+                                            </columns>
+                                          </TableView>
+                                          <Button layoutX="14.0" layoutY="335.0" mnemonicParsing="false" onAction="#viewCustomerTable" text="Load Details" />
+                                       </children></Pane>
+                                    <Pane fx:id="paneViewCustDetails" prefHeight="447.0" prefWidth="519.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="45.0" text="Enter Customer ID :" />
+                                          <TextField fx:id="txtCustIdView" layoutX="117.0" layoutY="41.0" prefHeight="25.0" prefWidth="142.0" />
+                                          <Button layoutX="266.0" layoutY="41.0" mnemonicParsing="false" onAction="#viewSingleCustomerDetails" text="Submit" />
+                                          <Label layoutX="173.0" layoutY="14.0" text="Customer Details">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TableView fx:id="tableSingleCust" layoutX="1.0" layoutY="134.0" prefHeight="146.0" prefWidth="444.0" visible="false">
+                                             <columns>
+                                                <TableColumn fx:id="custId" prefWidth="50.0" text="ID" />
+                                                <TableColumn fx:id="custName" prefWidth="50.0" text="Name" />
+                                                <TableColumn fx:id="custPhone" prefWidth="48.0" text="Phone" />
+                                                <TableColumn fx:id="custAddress" prefWidth="85.0" text="Address" />
+                                                <TableColumn fx:id="custAge" minWidth="0.0" prefWidth="45.0" text="Age" />
+                                                <TableColumn fx:id="custGender" prefWidth="58.0" text="Gender" />
+                                                <TableColumn fx:id="custEmail" minWidth="0.0" prefWidth="107.0" text="Email" />
+                                             </columns>
+                                          </TableView>
+                                          <Label fx:id="lblError" layoutX="208.0" layoutY="85.0" text="" />
+                                       </children>
+                                    </Pane>
+                                    <Pane fx:id="paneEditCustomerDetails" prefHeight="447.0" prefWidth="519.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <GridPane layoutX="53.0" layoutY="106.0" prefHeight="221.0" prefWidth="287.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="103.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="206.0" minWidth="10.0" prefWidth="206.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="34.0" minHeight="0.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="33.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="33.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label prefHeight="17.0" prefWidth="77.0" text="Customer ID" />
+                                                <Label text="Name" GridPane.rowIndex="1" />
+                                                <Label text="Phone" GridPane.rowIndex="2" />
+                                                <Label text="Address" GridPane.rowIndex="3" />
+                                                <Label text="Age" GridPane.rowIndex="4" />
+                                                <Label text="Gender" GridPane.rowIndex="5" />
+                                                <Label text="Email" GridPane.rowIndex="6" />
+                                                <TextField fx:id="txtEditCustId" prefHeight="16.0" prefWidth="191.0" GridPane.columnIndex="1" />
+                                                <TextField fx:id="txtEditName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <TextField fx:id="txtEditPhone" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <TextField fx:id="txtEditAddress" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <TextField fx:id="txtEditAge" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                <TextField fx:id="txtEditGender" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                <TextField fx:id="txtEditEmail" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                             </children>
+                                          </GridPane>
+                                          <Label layoutX="159.0" layoutY="6.0" text="Edit Customer Information" />
+                                          <Label layoutX="23.0" layoutY="43.0" text="Enter Customer ID:" />
+                                          <TextField fx:id="txtEditCustDetails" layoutX="129.0" layoutY="39.0" />
+                                          <Button layoutX="287.0" layoutY="39.0" mnemonicParsing="false" onAction="#editViewShowCustDetails" text="Submit" />
+                                          <Button layoutX="159.0" layoutY="341.0" mnemonicParsing="false" onAction="#editCustAndPushToDb" text="Save" />
+                                       </children></Pane>
+                                    <Pane fx:id="paneDeleteCustDetails" prefHeight="447.0" prefWidth="519.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <Button layoutX="171.0" layoutY="162.0" mnemonicParsing="false" onAction="#deleteCustFromDb" text="Delete" />
+                                          <Label layoutX="143.0" layoutY="14.0" text="Delete Customer ">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="147.0" layoutY="74.0" text="Enter Customer ID" />
+                                          <TextField fx:id="txtDeleteCust" layoutX="121.0" layoutY="117.0" />
+                                          <Label fx:id="lblDelete" layoutX="121.0" layoutY="207.0" text="" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Button layoutX="669.0" layoutY="76.0" mnemonicParsing="false" onAction="#logoutFromView" text="Logout" textFill="#280ebc" />
+      <Label layoutX="508.0" layoutY="80.0" prefHeight="17.0" prefWidth="154.0" text="Welcome Branch Manager!" />
+   </children>
+</AnchorPane>
